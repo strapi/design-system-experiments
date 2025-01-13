@@ -1,5 +1,15 @@
 # @strapi/icons
 
+## 2.0.0-rc.15
+
+### Major Changes
+
+- [#1835](https://github.com/strapi/design-system/pull/1835) [`fd5e74b`](https://github.com/strapi/design-system/commit/fd5e74b5f449975833e2eb3271fd271b1cddee88) Thanks [@HichamELBSI](https://github.com/HichamELBSI)! - Bump ViteJS
+
+### Minor Changes
+
+- [#1831](https://github.com/strapi/design-system/pull/1831) [`240c73e`](https://github.com/strapi/design-system/commit/240c73eafdbfd6e47e48e042eb45b4d0f1827f75) Thanks [@vikasvarma369](https://github.com/vikasvarma369)! - added new check circle empty icon
+
 ## 2.0.0-rc.14
 
 ## 2.0.0-rc.13
