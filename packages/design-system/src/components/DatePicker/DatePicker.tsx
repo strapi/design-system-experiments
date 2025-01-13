@@ -138,6 +138,7 @@ const DatePicker = React.forwardRef<DatePickerTextInputElement, DatePickerProps>
       onClear,
       clearLabel = 'Clear',
       size = 'M',
+      autoComplete = 'off',
       ...restProps
     },
     ref,
@@ -281,7 +282,14 @@ const DatePicker = React.forwardRef<DatePickerTextInputElement, DatePickerProps>
       >
         <DatePickerTrigger className={className} hasError={hasError} size={size}>
           <Calendar fill="neutral500" aria-hidden />
-          <DatePickerTextInput ref={ref} aria-describedby={ariaDescription} id={id} name={name} {...restProps} />
+          <DatePickerTextInput
+            ref={ref}
+            aria-describedby={ariaDescription}
+            id={id}
+            name={name}
+            autoComplete={autoComplete}
+            {...restProps}
+          />
           {textValue && onClear ? (
             <IconBox
               tag="button"
