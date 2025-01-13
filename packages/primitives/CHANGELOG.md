@@ -1,5 +1,11 @@
 # @strapi/ui-primitives
 
+## 2.0.0-rc.15
+
+### Major Changes
+
+- [#1835](https://github.com/strapi/design-system/pull/1835) [`fd5e74b`](https://github.com/strapi/design-system/commit/fd5e74b5f449975833e2eb3271fd271b1cddee88) Thanks [@HichamELBSI](https://github.com/HichamELBSI)! - Bump ViteJS
+
 ## 2.0.0-rc.14
 
 ## 2.0.0-rc.13

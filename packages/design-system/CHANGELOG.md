@@ -1,5 +1,59 @@
 # @strapi/design-system
 
+## 2.0.0-rc.15
+
+### Major Changes
+
+- [#1835](https://github.com/strapi/design-system/pull/1835) [`fd5e74b`](https://github.com/strapi/design-system/commit/fd5e74b5f449975833e2eb3271fd271b1cddee88) Thanks [@HichamELBSI](https://github.com/HichamELBSI)! - Bump ViteJS
+
+### Minor Changes
+
+- [#1822](https://github.com/strapi/design-system/pull/1822) [`3d7125f`](https://github.com/strapi/design-system/commit/3d7125fe5f2c6cd8fe7e3e8c56b770b85ef63851) Thanks [@mukulpadwal](https://github.com/mukulpadwal)! - Added XS size variant to IconButton component for smaller button options.
+
+### Patch Changes
+
+- [#1833](https://github.com/strapi/design-system/pull/1833) [`ba28ea1`](https://github.com/strapi/design-system/commit/ba28ea1190f9aea82fceb64d40f08a05642b54fa) Thanks [@ShatilKhan](https://github.com/ShatilKhan)! - cleaner search bar
+
+- [#1840](https://github.com/strapi/design-system/pull/1840) [`cbf07ea`](https://github.com/strapi/design-system/commit/cbf07ea0c927e9067ed037c1705068199ba81256) Thanks [@dzakki](https://github.com/dzakki)! - sync view source to the correct path
+
+- [#1821](https://github.com/strapi/design-system/pull/1821) [`0693ce9`](https://github.com/strapi/design-system/commit/0693ce92f711bbff280dcd21d952bdc8a423892c) Thanks [@PlanckConst](https://github.com/PlanckConst)! - fix: Checkbox Item Not Centered
+
+  Added justify-content: center and align-items: center to Checkbox Indicator component
+
+  Original:
+
+  const CheckboxIndicator = styled(Checkbox.Indicator)`  width: 100%;
+  height: 100%;
+  cursor: pointer;`;
+
+  Updated:
+
+  const CheckboxIndicator = styled(Checkbox.Indicator)`
+
+  - display: inline-flex;
+  - pointer-events: auto !important;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  - justify-content: center;
+  - align-items: center;
+    `;
+
+  Refactored inline styling and added it to checkbox indicator stype component
+
+  Original:
+
+        <CheckboxIndicator style={{ display: 'inline-flex', pointerEvents: 'auto'}} forceMount>
+
+  Updated:
+
+        <CheckboxIndicator forceMount>
+
+- [#1834](https://github.com/strapi/design-system/pull/1834) [`bf538d1`](https://github.com/strapi/design-system/commit/bf538d1bb5ea599b49ec8b54595f16cea19c3ac1) Thanks [@mazzucchelli](https://github.com/mazzucchelli)! - Prevent tooltip from rendering when the label property is not passed
+
+- Updated dependencies [[`fd5e74b`](https://github.com/strapi/design-system/commit/fd5e74b5f449975833e2eb3271fd271b1cddee88)]:
+  - @strapi/ui-primitives@2.0.0-rc.15
+
 ## 2.0.0-rc.14
 
 ### Minor Changes
