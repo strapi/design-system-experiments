@@ -10,6 +10,7 @@ import { Flex, FlexComponent } from '../../primitives/Flex';
 import { Typography, TypographyComponent, TypographyProps } from '../../primitives/Typography';
 import { ANIMATIONS } from '../../styles/motion';
 import { inputFocusStyle } from '../../themes';
+import { ScrollArea } from '../../utilities/ScrollArea';
 import { Field, useField } from '../Field';
 
 /* -------------------------------------------------------------------------------------------------
@@ -196,7 +197,15 @@ const StyledValue = styled(Select.Value)`
  * SelectContent
  * -----------------------------------------------------------------------------------------------*/
 
-const SelectContent = styled(Select.Content)`
+const SelectContent = React.forwardRef<HTMLDivElement, ContentProps>((props, ref) => {
+  return (
+    <StyledContent ref={ref} {...props}>
+      <ScrollArea>{props.children}</ScrollArea>
+    </StyledContent>
+  );
+});
+
+const StyledContent = styled(Select.Content)`
   background: ${({ theme }) => theme.colors.neutral0};
   box-shadow: ${({ theme }) => theme.shadows.filterShadow};
   border: 1px solid ${({ theme }) => theme.colors.neutral150};
