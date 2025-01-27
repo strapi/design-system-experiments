@@ -40,7 +40,7 @@ interface CheckboxElProps extends Checkbox.CheckboxProps {}
 type CheckboxElement = HTMLButtonElement;
 
 const CheckboxEl = React.forwardRef<CheckboxElement, CheckboxElProps>(
-  ({ defaultChecked, checked: checkedProp, onCheckedChange, ...props }, forwardedRef) => {
+  ({ defaultChecked, disabled, checked: checkedProp, onCheckedChange, ...props }, forwardedRef) => {
     const checkboxRef = React.useRef<CheckboxElement>(null!);
     const [checked, setChecked] = useControllableState({
       defaultProp: defaultChecked,
@@ -51,10 +51,10 @@ const CheckboxEl = React.forwardRef<CheckboxElement, CheckboxElProps>(
     const composedRefs = useComposedRefs(checkboxRef, forwardedRef);
 
     return (
-      <CheckboxRoot ref={composedRefs} checked={checked} onCheckedChange={setChecked} {...props}>
-        <CheckboxIndicator forceMount>
-          {checked === true ? <CheckIcon width="1.6rem" fill="neutral0" /> : null}
-          {checked === 'indeterminate' ? <Minus fill="neutral0" /> : null}
+      <CheckboxRoot ref={composedRefs} checked={checked} disabled={disabled} onCheckedChange={setChecked} {...props}>
+        <CheckboxIndicator disabled={disabled} forceMount>
+          {checked === true ? <CheckIcon width="1.6rem" fill={disabled ? 'neutral500' : 'neutral0'} /> : null}
+          {checked === 'indeterminate' ? <Minus fill={disabled ? 'neutral500' : 'neutral0'} /> : null}
         </CheckboxIndicator>
       </CheckboxRoot>
     );
@@ -82,6 +82,7 @@ const CheckboxRoot = styled(Checkbox.Root)`
   }
 
   &[data-disabled] {
+    border: 1px solid ${(props) => props.theme.colors.neutral300};
     background-color: ${(props) => props.theme.colors.neutral200};
   }
 
@@ -100,7 +101,7 @@ const CheckboxRoot = styled(Checkbox.Root)`
   }
 `;
 
-const CheckboxIndicator = styled(Checkbox.Indicator)`
+const CheckboxIndicator = styled(Checkbox.Indicator)<{ disabled?: boolean }>`
   display: inline-flex;
   pointer-events: auto !important;
   width: 100%;
@@ -108,6 +109,7 @@ const CheckboxIndicator = styled(Checkbox.Indicator)`
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 `;
 
 /* -------------------------------------------------------------------------------------------------
