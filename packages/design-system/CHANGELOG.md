@@ -1,5 +1,20 @@
 # @strapi/design-system
 
+## 2.0.0-rc.17
+
+### Major Changes
+
+- [#1855](https://github.com/strapi/design-system/pull/1855) [`ac908a2`](https://github.com/strapi/design-system/commit/ac908a2437760c0a79a55b558ac5835b02cf7078) Thanks [@HichamELBSI](https://github.com/HichamELBSI)! - Migration guide update
+
+### Minor Changes
+
+- [#1850](https://github.com/strapi/design-system/pull/1850) [`1d5c646`](https://github.com/strapi/design-system/commit/1d5c646918c707626773751ff80460249d55f0bb) Thanks [@markkaylor](https://github.com/markkaylor)! - add start and end icons to MenuItem
+
+### Patch Changes
+
+- Updated dependencies [[`ac908a2`](https://github.com/strapi/design-system/commit/ac908a2437760c0a79a55b558ac5835b02cf7078)]:
+  - @strapi/ui-primitives@2.0.0-rc.17
+
 ## 2.0.0-rc.16
 
 ### Patch Changes

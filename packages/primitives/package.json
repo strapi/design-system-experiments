@@ -1,6 +1,6 @@
 {
   "name": "@strapi/ui-primitives",
-  "version": "2.0.0-rc.16",
+  "version": "2.0.0-rc.17",
   "license": "MIT",
   "sideEffects": false,
   "source": "./src/index.ts",

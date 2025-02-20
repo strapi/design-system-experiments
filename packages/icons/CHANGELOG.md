@@ -1,5 +1,15 @@
 # @strapi/icons
 
+## 2.0.0-rc.17
+
+### Major Changes
+
+- [#1855](https://github.com/strapi/design-system/pull/1855) [`ac908a2`](https://github.com/strapi/design-system/commit/ac908a2437760c0a79a55b558ac5835b02cf7078) Thanks [@HichamELBSI](https://github.com/HichamELBSI)! - Migration guide update
+
+### Minor Changes
+
+- [#1860](https://github.com/strapi/design-system/pull/1860) [`ee72e66`](https://github.com/strapi/design-system/commit/ee72e66426b7add9fd2cacbf3bdca8b4089da850) Thanks [@remidej](https://github.com/remidej)! - feat: add new icons (ArrowLine, SealCheck, ListSearch)
+
 ## 2.0.0-rc.16
 
 ## 2.0.0-rc.15
